@@ -1,0 +1,62 @@
+{
+  "name": "G-Drive Uploader",
+  "description": "Upload supported direct links Directly to your G-Drive. Powered by @moviezonlysupport!",
+  "keywords": [
+    "telegram",
+    "best",
+    "indian",
+    "pyrogram",
+    "gdrive",
+    "3",
+    "plugin",
+    "modular",
+    "productivity",
+    "g-drive",
+    "uploader"
+  ],
+  "repository": "https://githhttps://github.com/prgofficial/TG-to-GDRIVE",
+  "success_url": "https://github.com/aryanvikash/Google-Drive-Uploader",
+  "website": "https://github.com/prgofficial/TG-to-GDRIVE",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "TG_BOT_TOKEN": {
+      "description": "get this value from @BotFather",
+      "value": ""
+    },
+    "CHUNK_SIZE": {
+      "description": "should be an integer",
+      "value": "128",
+      "required": false
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/SayanthD/aria2-heroku"
+  }, {
+    "url": "https://github.com/amivin/rclone-heroku"
+  }, {
+    "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
